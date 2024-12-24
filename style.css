@@ -1,0 +1,94 @@
+/* Global styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Background animations to create the glitch effect */
+.anxiety-background {
+  background: linear-gradient(45deg, #0f0, #ff0, #f00);
+  background-size: 400% 400%;
+  animation: glitchBackground 10s ease infinite;
+}
+
+@keyframes glitchBackground {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+header h1 {
+  font-size: 3em;
+  margin-top: 50px;
+  color: #ff0000;
+  text-transform: uppercase;
+  animation: glitchText 1s linear infinite;
+}
+
+@keyframes glitchText {
+  0% { text-shadow: 1px 1px 3px red, 0 0 25px blue; }
+  50% { text-shadow: 1px 1px 3px red, 0 0 25px green; }
+  100% { text-shadow: 1px 1px 3px yellow, 0 0 25px purple; }
+}
+
+/* Price section */
+.price p {
+  font-size: 2em;
+  color: #ff00ff;
+  animation: priceFluctuate 2s ease-in-out infinite;
+}
+
+@keyframes priceFluctuate {
+  0% { color: #ff0000; }
+  50% { color: #ffff00; }
+  100% { color: #00ff00; }
+}
+
+.meme-gallery img {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px;
+  animation: memeFlashing 1.5s infinite;
+}
+
+@keyframes memeFlashing {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+button {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1.2em;
+  margin: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #f00;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 1em;
+  color: #00ff00;
+}
+
+footer .discord-btn {
+  background-color: #0088cc;
+  padding: 10px;
+  border: none;
+  font-size: 1.1em;
+  margin-top: 20px;
+  cursor: pointer;
+}
